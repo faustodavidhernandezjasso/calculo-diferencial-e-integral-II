@@ -1,0 +1,73 @@
+\documentclass[a4paper]{article} 
+\input{head}
+\newcommand{\pow}[2]{#1^{#2}}
+\newcommand{\supra}[1]{\textsuperscript{#1}}
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule \medskip % Upper rule
+\begin{minipage}{0.35\textwidth} 
+\raggedright
+\footnotesize
+Fausto David Hernández Jasso \hfill\\   
+317000928 \hfill\\
+fausto.david.hernandez.jasso@ciencias.unam.mx
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\large 
+Cálculo Diferencial e Integral II\\ 
+\normalsize 
+Fundamentos de la Integral de Riemann\\ 
+\end{minipage}
+\begin{minipage}{0.24\textwidth} 
+\raggedleft
+\today\hfill\\
+\end{minipage}
+\medskip\hrule 
+\bigskip
+\section{Ejercicios}
+\subsection{Ejercicio 1}
+\noindent
+Sea \(A \subset \mathbb{R}\) un conjunto no vacío acotado superiormente. Entonces
+\[
+    -\inf{\left(-A\right)} = \sup{\left(A\right)}
+\]
+\subsubsection*{Solución}
+\begin{proof}
+    Por definición sabemos que \(A \neq \varnothing\) y además existe un \(M \in \mathbb{R}\)
+    tal que \(a \leq M\) para todo \(a \in A\). Sabemos que por definición de \textbf{supremo}
+    se cumple que \(\sup{\left(A\right)} \leq M\). 
+    También sabemos que
+    \begin{align*}
+        a &\leq M &\forall a \in A \\
+        (-1) \cdot a &\geq (-1) \cdot M &\forall a \in A \\
+        -a &\geq -M &\forall a \in A
+    \end{align*}
+    Recordemos la definición de \(-A\)
+    \[
+        -A = \{-a \ : \ a \in A\}
+    \]
+    De la definición de \(-A\), sabemos que \(-A \neq \varnothing\).
+    Notemos que \(-M\) es una cota inferior del conjunto \(-A\)
+    consecuentemente \(-A\) está cotado inferiormente. Sea \(\beta\) una cota 
+    superior de \(A\) entonces por definición de \(\sup{\left(A\right)}\) tenemos que
+    \begin{align*}
+        \beta &\geq \sup{\left(A\right)} \geq a & \forall a \in A \\
+        (-1) \cdot \beta &\leq (-1) \cdot \sup{\left(A\right)} \leq (-1) \cdot a & \forall a \in A \\
+        -\beta &\leq -\sup{\left(A\right)} \leq -a & \forall a \in A
+    \end{align*}
+    Lo anterior pasa para cualquier cota superior \(\beta\) y por ende a cualquier cota inferior \(-\beta\).
+    \newline
+    Así notemos que \(-\sup{\left(A\right)}\) es una cota inferior de \(-A\) y además es la cota inferior 
+    más grande, es decir
+    \begin{align*}
+        \inf{\left(-A\right)} &= -\sup{\left(A\right)} \\
+        -\inf{\left(-A\right)} &= \sup{\left(A\right)}
+    \end{align*}
+\end{proof}
+\end{document}
