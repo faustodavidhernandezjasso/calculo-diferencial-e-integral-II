@@ -70,4 +70,142 @@ Sea \(A \subset \mathbb{R}\) un conjunto no vacío acotado superiormente. Entonc
         -\inf{\left(-A\right)} &= \sup{\left(A\right)}
     \end{align*}
 \end{proof}
+\subsection{Ejercicio 2}
+Suponga que \(f\) es creciente. Demuestre que
+\[
+    \int_{a}^{b} f^{-1} = bf^{-1}(b) - af^{-1}(a) - \int_{f^{-1}(a)}^{f^{-1}(b)}f
+\]
+\subsubsection*{Solución}
+\noindent
+Del problema sabemos lo siguiente 
+\begin{itemize}
+    \item \(f\) es biyectiva en \([a, b]\) ya que \(f^{-1}\) existe y es su inversa.
+    \item Como \(f\) es creciente en \([a, b]\) entonces \(f^{-1}\) también es 
+    creciente en \([f\left(a\right), f\left(b\right)]\).
+    \item Como \(f\) es creciente en \([a, b]\) entonces \(f\) es integrable \([a, b]\).
+    \item Como \(f^{-1}\) es creciente en \([f(a), f(b)]\) entonces \(f^{-1}\) es integrable \([f(a), f(b)]\).
+\end{itemize}
+\begin{proof}
+    Sea \(P = \{t_{0}, \dotsc, t_{n}\}\) una partición del intervalo \([a, b]\) y sea 
+\(P' = \{f^{-1}(t_{0}), \dotsc, f^{-1}(t_{n})\}\) una partición del intervalo \([f^{-1}\left(a\right), 
+f^{-1}\left(b\right)]\). Mostraremos que 
+\begin{align*}
+    L\left(f^{-1}, P\right) + U\left(f, P'\right) &= bf^{-1}\left(b\right) - af^{-1}\left(a\right) \\
+    U\left(f^{-1}, P\right) + L\left(f, P'\right) &= bf^{-1}\left(b\right) - af^{-1}\left(a\right)
+\end{align*}
+Seguiremos las siguientes definiciones
+\begin{align*}
+    m_{i} &= \inf{\left(\{f(x) \ | x \in [f^{-1}\left(t_{i - 1}\right), f^{-1}\left(t_{i}\right)] \ \}\right)} \\
+    M_{i} &= \sup{\left(\{f(x) \ | x \in [f^{-1}\left(t_{i - 1}\right), f^{-1}\left(t_{i}\right)] \ \}\right)} \\
+    m'_{i} &= \inf{\left(\{f^{-1}(x) \ | \ x \in [t_{i - 1}, t_{i}] \ \}\right)} \\
+    M'_{i} &= \sup{\left(\{f^{-1}(x) \ | \ x \in [t_{i - 1}, t_{i}] \ \}\right)}
+\end{align*}
+Veamos \(L\left(f^{-1}, P\right) + U\left(f, P'\right) = bf^{-1}\left(b\right) - af^{-1}\left(a\right)\)
+\newline 
+\begin{align*}
+    L\left(f^{-1}, P\right) &= \sum_{i = 1}^{n} m'_{i}(t_{i} - t_{i - 1})
+\end{align*}
+Como \(f^{-1}\) también es creciente tenemos que \(m'_{i} = f^{-1}\left(t_{i - 1}\right)\). 
+consecuentemente
+\begin{align*}
+    L\left(f^{-1}, P\right) &= \sum_{i = 1}^{n} m'_{i}(t_{i} - t_{i - 1}) \\
+                            &= \sum_{i = 1}^{n} f^{-1}\left(t_{i - 1}\right)(t_{i} - t_{i - 1})
+\end{align*}
+\begin{align*}
+    U\left(f, P'\right) &= \sum_{i = 1}^{n} M_{i}(f^{-1}\left(t_{i}\right) - f^{-1}\left(t_{i - 1}\right))
+\end{align*}
+Como \(f\) es creciente entonces tenemos que \(M_{i} = f\left(f^{-1}\left(t_{i}\right)\right) = t_{i}\)
+\begin{align*}
+    U\left(f, P'\right) &= \sum_{i = 1}^{n} M_{i}(f^{-1}\left(t_{i}\right) - f^{-1}\left(t_{i - 1}\right)) \\
+                        &= \sum_{i = 1}^{n} t_{i}(f^{-1}\left(t_{i}\right) - f^{-1}\left(t_{i - 1}\right))
+\end{align*}
+\begin{align*}
+    L\left(f^{-1}, P\right) + U\left(f, P'\right) &= \sum_{i = 1}^{n} f^{-1}\left(t_{i - 1}\right)(t_{i} - t_{i - 1})
+     + \sum_{i = 1}^{n} t_{i}(f^{-1}\left(t_{i}\right) - f^{-1}\left(t_{i - 1}\right)) \\
+    &= \left(f^{-1}\left(t_{0}\right)t_{1} - f^{-1}\left(t_{0}\right)t_{0}\right) + 
+       \left(f^{-1}\left(t_{1}\right)t_{2} - f^{-1}\left(t_{1}\right)t_{1}\right) + \dotsc + \left(f^{-1}\left(t_{n - 1}\right)t_{n} - f^{-1}\left(t_{n - 1}\right)t_{n - 1}\right) \\
+    &\ + \left(f^{-1}\left(t_{1}\right)t_{1} - f^{-1}\left(t_{0}\right)t_{1}\right) 
+       + \left(f^{-1}\left(t_{2}\right)t_{2} - f^{-1}\left(t_{1}\right)t_{2}\right) + \dotsc +
+       \left(f^{-1}\left(t_{n}\right)t_{n} - f^{-1}\left(t_{n - 1}\right)t_{n}\right) \\
+    &= \left(f^{-1}\left(t_{0}\right)t_{1} - f^{-1}\left(t_{0}\right)t_{1}\right) + 
+       \left(f^{-1}\left(t_{1}\right)t_{1} - f^{-1}\left(t_{1}\right)t_{1}\right) +
+       \left(f^{-1}\left(t_{1}\right)t_{2} - f^{-1}\left(t_{1}\right)t_{2}\right) \\
+    &\ + \left(f^{-1}\left(t_{2}\right)t_{2} - f^{-1}\left(t_{2}\right)t_{2}\right) + \dotsc + 
+       \left(f^{-1}\left(t_{n - 1}\right)t_{n} - f^{-1}\left(t_{n - 1}\right)t_{n}\right) \\
+    &\ + \left(f^{-1}\left(t_{n - 1}\right)t_{n - 1} - f^{-1}\left(t_{n - 1}\right)t_{n - 1}\right) +
+       \left(f^{-1}\left(t_{n}\right)t_{n} - f^{-1}\left(t_{0}\right)t_{0}\right) \\
+    &= 0 + 0 + 0 + 0 + \dotsc + 0 + 0 + \left(f^{-1}\left(t_{n}\right)t_{n} - f^{-1}\left(t_{0}\right)t_{0}\right) \\
+    &= f^{-1}\left(t_{n}\right)t_{n} - f^{-1}\left(t_{0}\right)t_{0} \\
+\end{align*}
+Recordando que \(t_0 = a\) y \(t_{n} = b\) entonces
+\[
+    f^{-1}\left(b\right)b - f^{-1}\left(a\right)a = bf^{-1}\left(b\right) - af^{-1}\left(a\right) 
+\]
+Así 
+\[
+    L\left(f^{-1}, P\right) + U\left(f, P'\right) = bf^{-1}\left(b\right) - af^{-1}\left(a\right) 
+\]
+\newpage
+Veamos \(U\left(f^{-1}, P\right) + L\left(f, P'\right) = bf^{-1}\left(b\right) - af^{-1}\left(a\right)\)
+\newline 
+\begin{align*}
+    U\left(f^{-1}, P\right) &= \sum_{i = 1}^{n} M'_{i}(t_{i} - t_{i - 1})
+\end{align*}
+Como \(f^{-1}\) también es creciente tenemos que \(M'_{i} = f^{-1}\left(t_{i}\right)\). 
+consecuentemente
+\begin{align*}
+    U\left(f^{-1}, P\right) &= \sum_{i = 1}^{n} M'_{i}(t_{i} - t_{i - 1}) \\
+                            &= \sum_{i = 1}^{n} f^{-1}\left(t_{i}\right)(t_{i} - t_{i - 1})
+\end{align*}
+\begin{align*}
+    L\left(f, P'\right) &= \sum_{i = 1}^{n} m_{i}(f^{-1}\left(t_{i}\right) - f^{-1}\left(t_{i - 1}\right))
+\end{align*}
+Como \(f\) es creciente entonces tenemos que \(m_{i} = f\left(f^{-1}\left(t_{i - 1}\right)\right) = t_{i - 1}\)
+\begin{align*}
+    L\left(f, P'\right) &= \sum_{i = 1}^{n} m_{i}(f^{-1}\left(t_{i}\right) - f^{-1}\left(t_{i - 1}\right)) \\
+                        &= \sum_{i = 1}^{n} t_{i - 1}(f^{-1}\left(t_{i}\right) - f^{-1}\left(t_{i - 1}\right))
+\end{align*}
+\begin{align*}
+    U\left(f^{-1}, P\right) + L\left(f, P'\right) &= \sum_{i = 1}^{n} f^{-1}\left(t_{i}\right)(t_{i} - t_{i - 1})
+                                                  + \sum_{i = 1}^{n} t_{i - 1}(f^{-1}\left(t_{i}\right) - f^{-1}\left(t_{i - 1}\right)) \\
+                                                  &= (f^{-1}\left(t_{1}\right)t_{1} - f^{-1}\left(t_{1}\right)t_{0}) 
+                                                  + \left(f^{-1}\left(t_{2}\right)t_{2} - f^{-1}\left(t_{2}\right)t_{1}\right) + 
+                                                  \dotsc + \left(f^{-1}\left(t_{n}\right)t_{n} - f^{-1}\left(t_{n}\right)t_{n - 1}\right) \\
+                                                  &\ + + \left(f^{-1}\left(t_{1}\right)t_{1} - f^{-1}\left(t_{0}\right)t_{1}\right) 
+                                                  + \left(f^{-1}\left(t_{2}\right)t_{2} - f^{-1}\left(t_{1}\right)t_{2}\right) + \dotsc +
+                                                  \left(f^{-1}\left(t_{n}\right)t_{n} - f^{-1}\left(t_{n - 1}\right)t_{n}\right) \\
+                                               &= \left(f^{-1}\left(t_{0}\right)t_{1} - f^{-1}\left(t_{0}\right)t_{1}\right) + 
+                                                  \left(f^{-1}\left(t_{1}\right)t_{1} - f^{-1}\left(t_{1}\right)t_{1}\right) +
+                                                  \left(f^{-1}\left(t_{1}\right)t_{2} - f^{-1}\left(t_{1}\right)t_{2}\right) \\
+                                               &\ + \left(f^{-1}\left(t_{2}\right)t_{2} - f^{-1}\left(t_{2}\right)t_{2}\right) + \dotsc + 
+                                                  \left(f^{-1}\left(t_{n - 1}\right)t_{n} - f^{-1}\left(t_{n - 1}\right)t_{n}\right) \\
+                                               &\ + \left(f^{-1}\left(t_{n - 1}\right)t_{n - 1} - f^{-1}\left(t_{n - 1}\right)t_{n - 1}\right) +
+                                                  \left(f^{-1}\left(t_{n}\right)t_{n} - f^{-1}\left(t_{0}\right)t_{0}\right) \\
+                                               &= 0 + 0 + 0 + 0 + \dotsc + 0 + 0 + \left(f^{-1}\left(t_{n}\right)t_{n} - f^{-1}\left(t_{0}\right)t_{0}\right) \\
+                                               &= f^{-1}\left(t_{n}\right)t_{n} - f^{-1}\left(t_{0}\right)t_{0} \\
+\end{align*}
+Recordando que \(t_0 = a\) y \(t_{n} = b\) entonces
+\[
+    f^{-1}\left(b\right)b - f^{-1}\left(a\right)a = bf^{-1}\left(b\right) - af^{-1}\left(a\right) 
+\]
+Así 
+\[
+    U\left(f^{-1}, P\right) + L\left(f, P'\right) = bf^{-1}\left(b\right) - af^{-1}\left(a\right) 
+\]
+\begin{align*}
+    L\left(f^{-1}, P\right) + U\left(f, P'\right) &= bf^{-1}\left(b\right) - af^{-1}\left(a\right) \\
+    U\left(f^{-1}, P\right) + L\left(f, P'\right) &= bf^{-1}\left(b\right) - af^{-1}\left(a\right) \\
+                                                  &\Rightarrow  \\
+    L\left(f^{-1}, P\right) &= bf^{-1}\left(b\right) - af^{-1}\left(a\right) - U\left(f, P'\right) \\
+    U\left(f^{-1}, P\right) &= bf^{-1}\left(b\right) - af^{-1}\left(a\right) - L\left(f, P'\right) \\
+\end{align*}
+Como \(f^{-1}\) es integrable entonces
+\begin{align*}
+    \int_{a}^{b} f &= \sup{\left(L\left(f^{-1}, P\right)\right)} \\
+                   &= \sup{\left(bf^{-1}\left(b\right) - af^{-1}\left(a\right) - U\left(f, P'\right)\right)} \\
+                   &= bf^{-1}\left(b\right) - af^{-1}\left(a\right) + \sup{\left(- U\left(f, P'\right)\right)} \\
+                   &= bf^{-1}\left(b\right) - af^{-1}\left(a\right) - \inf{\left(U\left(f, P'\right)\right)} \\
+                   &= bf^{-1}\left(b\right) - af^{-1}\left(a\right) - \int_{f^{-1}(a)}^{f^{-1}(b)} f \\
+\end{align*}
+\end{proof}
 \end{document}
