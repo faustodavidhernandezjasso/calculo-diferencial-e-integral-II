@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/main"] 1708492282 "build/main.bcf" "build/main.bbl" "build/main" 1708495502 0
+["biber build/main"] 1708911809 "build/main.bcf" "build/main.bbl" "build/main" 1708914190 0
   "./ecl.bib" 1692853586 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "build/main.bcf" 1708495501 107344 5a52ae481bd48588b1ab466a66e8c3ff "pdflatex"
+  "build/main.bcf" 1708914190 107344 5a52ae481bd48588b1ab466a66e8c3ff "pdflatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["pdflatex"] 1708495499 "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-i/ejercicios/plantilla/main.tex" "build/main.pdf" "main" 1708495502 0
+["pdflatex"] 1708914188 "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-i/ejercicios/plantilla/main.tex" "build/main.pdf" "main" 1708914190 0
   "C:/Users/faust/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1707773613 162602 09e0a1780be476291122a2020f89e47e ""
   "C:/Users/faust/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1689719158 24118871 b4f594084964a40323743f0bbfbd51d7 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -31,6 +31,7 @@
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb" 1136874948 35118 a8551d23cfb4fcceb64f161610e925d2 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247596667 37912 07513ec114ac737ab54cea0152f4424b ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1247596667 31809 8670ca339bf94e56da1fc21c80635e2a ""
@@ -39,6 +40,7 @@
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1247596666 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
+  "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb" 1247596673 35309 940e81a5b9e04201a07e8b33a3ae6e64 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/vf/bitstrea/charter/bchb7t.vf" 1136793854 1372 ea6b112e4d27477183c2c2a90a3b7b01 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/vf/bitstrea/charter/bchr7t.vf" 1136793854 1372 955cf021d0094e95829436b7bdab6458 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/vf/bitstrea/charter/bchri7t.vf" 1136793854 1376 2c4801330fd387c4a485e772ce95483c ""
@@ -251,13 +253,13 @@
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/wasysym.sty" 1579693002 11252 7fbfbe7bbcbe1f73acbe32ae2f10c666 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "build/main.aux" 1708495501 1168 a3e1581a4a0e15d2d5cedd8753e64060 "pdflatex"
-  "build/main.bbl" 1708492284 486 ee04f40f768daeed26442158e95aba61 "biber build/main"
-  "build/main.out" 1708495501 323 53f91d93abbc4aaa41b810d8ae2de5c4 "pdflatex"
-  "build/main.run.xml" 1708495501 2298 d3ce36a7304073a33186df2fa4c9cbc3 "pdflatex"
-  "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-i/ejercicios/plantilla/main.tex" 1708495498 11860 5eadba45a9cc89971ef3ae1e1423b7ef ""
+  "build/main.aux" 1708914190 1286 89463e6e646e134d5a514d396488437c "pdflatex"
+  "build/main.bbl" 1708911813 486 ee04f40f768daeed26442158e95aba61 "biber build/main"
+  "build/main.out" 1708914190 438 d3baa0538bce202457a8073c940d1c78 "pdflatex"
+  "build/main.run.xml" 1708914190 2298 d3ce36a7304073a33186df2fa4c9cbc3 "pdflatex"
+  "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-i/ejercicios/plantilla/main.tex" 1708914188 16913 6dac7d2967ebea286317e7cfa1e21fb8 ""
   "head.tex" 1693865399 2792 da67866cba2ac6acd5a3668166b14daf ""
-  "main.tex" 1708495498 11860 5eadba45a9cc89971ef3ae1e1423b7ef ""
+  "main.tex" 1708914188 16913 6dac7d2967ebea286317e7cfa1e21fb8 ""
   "style/avm.sty" 1692853586 5221 cec8bc669a9099a9976655c41e198f2d ""
   "style/btree.sty" 1692853586 4357 1f940af56ec4d6b13bc5f67ae255817c ""
   "style/lstlisting.sty" 1692853586 969 44fc7c305325b375fc1157a6ff8b063e ""

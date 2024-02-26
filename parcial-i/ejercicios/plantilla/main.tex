@@ -208,4 +208,110 @@ Como \(f^{-1}\) es integrable entonces
                    &= bf^{-1}\left(b\right) - af^{-1}\left(a\right) - \int_{f^{-1}(a)}^{f^{-1}(b)} f \\
 \end{align*}
 \end{proof}
+\subsection{Ejercicio 3}
+La función de Tomae se define como
+\[
+    t(x) =
+    \begin{cases}
+        \frac{1}{n} & \text{si } x = \frac{m}{n} \\
+        0 & \text{si } x \notin \mathbb{Q}
+    \end{cases}
+\]
+Demuestra que \(t\) es integrable y calcula \(\int_{0}^{1} t\)
+\subsubsection*{Solución}
+\begin{proof}
+    Sea \(\varepsilon > 0\) y \(N \in \mathbb{N}\) tal que \(\frac{1}{N + 1} < \frac{\epsilon}{2}\),
+    definimos al conjutno \(A\) como sigue:
+    \[
+        A = \left\{\frac{1}{2}, \frac{1}{3}, \frac{2}{3}, \frac{1}{4}, \frac{3}{4}, \dotsc, \frac{1}{N}
+        , \dotsc, \frac{N - 1}{N}\right\}
+    \]
+    es decir, 
+    \[
+        A = \left\{ x \in [0, 1] \ | \ x = \frac{p}{q} \ \text{y} \ \frac{1}{q} \geq \frac{\varepsilon}{2} \right\}
+    \]
+    Sí \(x \in A\) entonces \(t\left(x\right) \in \left\{\frac{1}{2}, \frac{1}{3}, \frac{1}{4}
+    , \dotsc, \frac{1}{N}\right\}\), así sabemos que \(t\left(x\right) \leq 1\).
+    \newline
+    Sí \(x \notin A\) entonces \(t\left(x\right) \leq \frac{1}{N + 1} < \frac{\varepsilon}{2}\).
+    \newline 
+    Notemos que \(A\) es finito. Sea \(|A| = k\), y sea \(n > k\) tal que \(\frac{1}{n} < 
+    \frac{\varepsilon}{4k}\). Sea \(P\) una partición del invervalo \([0, 1]\) definida como
+    \[
+        P = \{0 = t_{0}, t_{1}, \dotsc, t_{n - 1}, t_{n} = 1\}    
+    \]
+    y además cumple con que \(t_{i} - t_{i - 1} = \frac{1}{n}\) \(\forall i \in \{1, \dotsc, n\}\).
+    \newline 
+    Veamos \(L\left(t(x), P_{n}\right)\)
+    \newline
+    Por densidad de los números irracionales sabemos que
+    \[
+        [t_{i - 1}, t_{i}] \cap \mathbb{I} \neq \varnothing
+    \]
+    consecuentemente existe un \(x \in [t_{i-1}, t_{i}]\) tal que \(t\left(x\right) = 0\), por lo tanto 
+    \(m_{i} = 0\) \(\forall i \in \{1, \dotsc, n\}\). Así
+    \begin{align*}
+        L\left(t(x), P\right) &= \sum_{i = 1}^{n} m_{i}(t_{i} - t_{i - 1}) \\
+                              &= \sum_{i = 1}^{n} 0(t_{i} - t_{i - 1}) \\
+                              &= \sum_{i = 1}^{n} 0 \\
+                              &= 0 \\
+    \end{align*}
+    Veamos \(U\left(t(x), P_{n}\right)\)
+    \newline 
+    Por definición tenemos que
+    \[
+        U\left(t(x), P_{n}\right) = \sum_{i = 1}^{n} M_{i}\left(t_{i} - t_{i - 1}\right)
+    \]
+    Notemos que lo anterior es equivalente a
+    \begin{align*}
+        U\left(t(x), P_{n}\right) &= \sum_{i = 1}^{n} M_{i}\left(t_{i} - t_{i - 1}\right) \\
+        &= \sum_{[t_{i - 1}, t_{i}] \cap A = \varnothing} M_{i}\left(t_{i} - t_{i - 1}\right)
+          + \sum_{[t_{i - 1}, t_{i}] \cap A \neq \varnothing} M_{i}\left(t_{i} - t_{i - 1}\right) \\
+    \end{align*}
+    Sea \(i \in \{1, \dotsc, n\}\) tal que \([t_{i - 1}, t_{i}] \cap A \neq \varnothing\)
+    entonces existe \(x \in [t_{i - 1}, t_{i}]\) tal que \(t\left(x\right) \in \left\{\frac{1}{2}, 
+    \frac{1}{3}, \dotsc, \frac{1}{N}\right\}\), así \(t(x) \leq 1\) \(\forall x \in [t_{i - 1}, t_{i}]\)
+    consecuentemente \(M_{i} \leq 1\). Hacemos la observación de que \(A\) interseca a lo más a \(2k\)
+    intervalos de \(P\), recordemos que \(|A| = k\), entonces se puede dar el caso en el que cada 
+    elemento de \(A\) sea igual a \(t_{i}\) para \(k\) elementos de \(P\), así 
+    ese elemento de \(A\) está en el intervalo \([t_{i - 1}, t_{i}]\) y \([t_{i}, t_{i + 1}]\).
+    Así 
+    \begin{align*}
+        \sum_{[t_{i - 1}, t_{i}] \cap A \neq \varnothing} M_{i}\left(t_{i} - t_{i - 1}\right) &\leq  
+        \sum_{[t_{i - 1}, t_{i}] \cap A \neq \varnothing} 1\left(t_{i} - t_{i - 1}\right) \\
+        &< \sum_{[t_{i - 1}, t_{i}] \cap A \neq \varnothing} \frac{\epsilon}{4k} \\
+        &= \frac{\epsilon}{4k} \sum_{[t_{i - 1}, t_{i}] \cap A \neq \varnothing} 1 \\
+        &\leq \frac{\epsilon}{4k} \sum_{j = 1}^{2k} 1 \\
+        &= \frac{\epsilon}{4k}(2k) \\
+        &= \frac{\epsilon}{2} \\
+    \end{align*}
+    Por lo tanto
+    \[
+        \sum_{[t_{i - 1}, t_{i}] \cap A \neq \varnothing} M_{i}\left(t_{i} - t_{i - 1}\right) < \frac{\epsilon}{2}
+    \]
+    Así tenemos que
+    \[
+        U\left(t(x), P\right) - L\left(t(x), P\right) = U\left(t(x), P\right) - 0 = U\left(t(x), P\right) - L\left(f, P\right) = U\left(f, P\right) < \frac{\varepsilon}{2} < \varepsilon 
+    \]
+    Por el \textbf{Criterio de Integrabilidad} tenemos que \(t\) es integrable.
+\end{proof}
+Calcularemos \(\int_{0}^{1}t\)
+\newline 
+Sea \(\varepsilon > 0\), por lo anterior sabemos que existe \(P\) una partición del intervalo 
+\([0, 1]\) tal que 
+\[
+    U\left(t(x), P\right) - L\left(t(x), P\right) < \varepsilon
+\]
+Sabemos que \(\int_{0}^{1} t\) cumple lo siguiente 
+\[
+    L\left(t(x), P\right) \leq \int_{0}^{1} t \leq U\left(t(x), P\right)
+\]
+Pero ya hemos calculado tanto \(L\left(t(x), P\right)\) y \(U\left(t(x), P\right)\)
+\[
+    0 = L\left(t(x), P\right) \leq \int_{0}^{1} t \leq U\left(t(x), P\right) < \varepsilon
+\]
+Como lo anterior pasa para cualquier \(\varepsilon > 0\) entonces 
+\[
+    \int_{0}^{1} t = 0
+\]
 \end{document}
