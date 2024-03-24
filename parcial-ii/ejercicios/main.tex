@@ -1,0 +1,234 @@
+\documentclass[a4paper]{article} 
+\input{head}
+\newcommand{\pow}[2]{#1^{#2}}
+\newcommand{\supra}[1]{\textsuperscript{#1}}
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule \medskip % Upper rule
+\begin{minipage}{0.35\textwidth} 
+\raggedright
+\footnotesize
+Fausto David Hernández Jasso \hfill\\   
+317000928 \hfill\\
+fausto.david.hernandez.jasso@ciencias.unam.mx
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\large 
+Cálculo Diferencial e Integral II\\ 
+\normalsize 
+Funciones logaritmo, exponencial y trigonométricas\\ 
+\end{minipage}
+\begin{minipage}{0.24\textwidth} 
+\raggedleft
+\today\hfill\\
+\end{minipage}
+\medskip\hrule 
+\bigskip
+\section{Ejercicios}
+\subsection{Ejercicio 1}
+\noindent
+Derive cada una de las siguientes funciones
+\begin{align*}
+    f(x) &= e^{e^{e^{e^{x}}}} \\
+    f(x) &= \log{\left(1 + \log{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)}\right)} \\
+    f(x) &= \left(\sin{x}\right)^{\sin{\left(\sin{x}\right)}} \\
+    f(x) &= e^{\left(\int_{0}^{x} e^{-t^2} \ dt\right)} \\
+    f(x) &= x^x
+\end{align*}
+\subsubsection*{Solución}
+Veamos \(f(x) = e^{e^{e^{e^{x}}}}\).
+\newline
+Sea \(h(x) = e^{x}\), notemos lo siguiente:
+\begin{align*}
+    h_{1}\left(x\right) &= \left(h \circ h\right)(x) \\
+                        &= h(h(x)) \\ 
+                        &= e^{e^{x}}
+\end{align*}
+Así tenemos que
+\begin{align*}
+    h_{1}'(x) &= \left(\left(h \circ h\right)(x)\right)' \\
+              &= h'(h(x))\cdot h'(x)
+\end{align*}
+Sabemos que \(h'(x) = e^{x}\), entonces 
+\begin{align*}
+    h_{1}'(x) &= h'(e^{x}) \cdot e^{x} \\
+              &= e^{e^{x}} \cdot e^{x}
+\end{align*}
+Veamos que 
+\begin{align*}
+    h_{2}(x) &= \left(h \circ h_{1}\right)(x) \\
+          &= h\left(h_{1}(x) \right) \\
+          &= e^{e^{e^{x}}}
+\end{align*}
+Así tenemos que
+\begin{align*}
+    h_{2}'(x) &= \left(\left(h \circ h_{1}\right)(x)\right)' \\
+              &= h'(h_{1}(x))\cdot h_{1}'(x)
+\end{align*}
+Sabemos que \(h'(x) = e^{x}\) y \(h_{1}'(x) = e^{e^{x}} \cdot e^{x}\), entonces 
+\begin{align*}
+    h_{2}'(x) &= h'(e^{e^{x}}) \cdot e^{e^{x}} \cdot e^{x} \\
+              &= e^{e^{e^{x}}} \cdot e^{e^{x}} \cdot e^{x}
+\end{align*}
+Veamos que 
+\begin{align*}
+    h_{3}(x) &= \left(h \circ h_{2}\right)(x) \\
+          &= h\left(h_{2}(x) \right) \\
+          &= e^{e^{e^{e^{x}}}}
+\end{align*}
+Así tenemos que
+\begin{align*}
+    h_{3}'(x) &= \left(\left(h \circ h_{2}\right)(x)\right)' \\
+              &= h'(h_{2}(x))\cdot h_{2}'(x) \\
+\end{align*}
+Sabemos que \(h'(x) = e^{x}\) y \(h_{1}'(x) = e^{e^{x}} \cdot e^{x}\), entonces 
+\begin{align*}
+    h_{3}'(x) &= h'(e^{e^{e^{x}}}) \cdot e^{e^{e^{x}}} \cdot e^{e^{x}} \cdot e^{x}  \\
+              &= e^{e^{e^{e^{x}}}} \cdot e^{e^{e^{x}}} \cdot e^{e^{x}} \cdot e^{x}
+\end{align*}
+Por lo tanto 
+\[
+    \boxed{\boxed{\left(e^{e^{e^{e^{x}}}}\right)' = e^{e^{e^{e^{x}}}} \cdot e^{e^{e^{x}}} \cdot e^{e^{x}} \cdot e^{x}}}  
+\]
+Veamos \(f(x) = \log{\left(1 + \log{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)}\right)}\)
+\newline
+Sea \(g(x) = e^{1 + x}\), notemos lo siguiente:
+\begin{align*}
+    g_{1}\left(x\right) &= \left(g \circ g\right)(x) \\
+                        &= g(g(x)) \\ 
+                        &= e^{1 + e^{1 + x}}
+\end{align*}
+Así tenemos que
+\begin{align*}
+    g_{1}'(x) &= \left(\left(g \circ g\right)(x)\right)' \\
+              &= g'(g(x))\cdot g'(x)
+\end{align*}
+Sabemos que \(g'(x) = e^{1 + x}\), entonces 
+\begin{align*}
+    g_{1}'(x) &= g'(e^{1 + x}) \cdot e^{1 + x} \\
+              &= e^{e^{1 + x}} \cdot e^{1 + x}
+\end{align*}
+Sea \(h(x) = \log{\left(1 + x\right)}\), notemos lo siguiente:
+\begin{align*}
+    h_{1}\left(x\right) &= \left(h \circ g_{1}\right)(x) \\
+                        &= h(g_{1}(x)) \\ 
+                        &= \log{\left(1 + e^{1 + e^{1 + x}}\right)}  
+\end{align*}
+Así tenemos que
+\begin{align*}
+    h_{1}'(x) &= \left(\left(h \circ g_{1}\right)(x)\right)' \\
+              &= h'(g_{1}(x))\cdot g_{1}'(x)
+\end{align*}
+Sabemos que \(h'(x) = \frac{1}{1 + x}\) y \(g_{1}'(x) = e^{e^{1 + x}} \cdot e^{1 + x} \), entonces
+\begin{align*}
+    h_{1}'(x) &= h'(e^{1 + e^{1 + x}}) \cdot e^{e^{1 + x}} \cdot e^{1 + x} \\
+              &= \left(\frac{1}{1 + e^{1 + e^{1 + x}}}\right) \cdot e^{e^{1 + x}} \cdot e^{1 + x} \\
+              &= \frac{e^{e^{1 + x}} \cdot e^{1 + x}}{1 + e^{1 + e^{1 + x}}}
+\end{align*}
+Veamos que 
+\begin{align*}
+    h_{2}\left(x\right) &= \left(h \circ h_{1}\right)(x) \\
+                        &= h(h_{1}(x)) \\ 
+                        &= \log{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)}  
+\end{align*}
+Así tenemos que
+\begin{align*}
+    h_{2}'(x) &= \left(\left(h \circ h_{1}\right)(x)\right)' \\
+              &= h'(h_{1}(x))\cdot h_{1}'(x)
+\end{align*}
+Sabemos que \(h'(x) = \frac{1}{1 + x}\) y \(h_{1}'(x) = \frac{e^{e^{1 + x}} \cdot e^{1 + x}}{1 + e^{1 + e^{1 + x}}} \), entonces
+\begin{align*}
+    h_{2}'(x) &= h'\left(\log{\left(1 + e^{1 + e^{1 + x}}\right)}\right) \cdot \frac{e^{e^{1 + x}} \cdot e^{1 + x}}{1 + e^{1 + e^{1 + x}}} \\
+              &= \frac{1}{1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}} \cdot \frac{e^{e^{1 + x}} \cdot e^{1 + x}}{1 + e^{1 + e^{1 + x}}} \\
+              &= \frac{e^{e^{1 + x}} \cdot e^{1 + x}}{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)\left(1 + e^{1 + e^{1 + x}}\right)}
+\end{align*}
+Veamos que 
+\begin{align*}
+    h_{3}\left(x\right) &= \left(h \circ h_{2}\right)(x) \\
+                        &= h(h_{2}(x)) \\ 
+                        &= \log{\left(1 + \log{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)}\right)}  
+\end{align*}
+Así tenemos que
+\begin{align*}
+    h_{3}'(x) &= \left(\left(h \circ h_{2}\right)(x)\right)' \\
+              &= h'(h_{2}(x))\cdot h_{2}'(x)
+\end{align*}
+Sabemos que \(h'(x) = \frac{1}{1 + x}\) y \(h_{2}'(x) = \frac{e^{e^{1 + x}} \cdot e^{1 + x}}{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)\left(1 + e^{1 + e^{1 + x}}\right)} \), entonces
+\begin{align*}
+    h_{3}'(x) &= h'\left(\log{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)}\right) \cdot 
+                    \frac{e^{e^{1 + x}} \cdot e^{1 + x}}{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)\left(1 + e^{1 + e^{1 + x}}\right)} \\
+              &= \frac{1}{1 + \log{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)}} \cdot 
+              \frac{e^{e^{1 + x}} \cdot e^{1 + x}}{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)\left(1 + e^{1 + e^{1 + x}}\right)} \\ \\
+              &= \frac{e^{e^{1 + x}} \cdot e^{1 + x}}{\left(1 + \log{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)}\right)
+              \left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)\left(1 + e^{1 + e^{1 + x}}\right)}
+\end{align*}
+Por lo tanto 
+\[
+    \boxed{\boxed{\left(\log{\left(1 + \log{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)}\right)}\right)'
+    = \frac{e^{e^{1 + x}} \cdot e^{1 + x}}{\left(1 + \log{\left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)}\right)
+    \left(1 + \log{\left(1 + e^{1 + e^{1 + x}}\right)}\right)\left(1 + e^{1 + e^{1 + x}}\right)}}}
+\]
+Veamos \(f\left(x\right) = \left(\sin{x}\right)^{\sin{\left(\sin{x}\right)}}\)
+\newline
+Por las propiedades de la función exponencial y de la función logaritmo tenemos que
+\begin{align*}
+    f(x) &= \left(\sin{x}\right)^{\sin{\left(\sin{x}\right)}} \\
+         &= e^{\sin{\left(\sin{x}\right)} \cdot \log{\left(\sin{x}\right)}} \\
+\end{align*}
+Así tenemos que 
+\begin{align*}
+    f'(x) &= \left(e^{\sin{\left(\sin{x}\right)} \cdot \log{\left(\sin{x}\right)}}\right)' \\
+          &= e^{\sin{\left(\sin{x}\right)} \cdot \log{\left(\sin{x}\right)}} \cdot 
+             \left(\sin{\left(\sin{x}\right)} \cdot \log{\left(\sin{x}\right)}\right)' \\
+          &= e^{\sin{\left(\sin{x}\right)} \cdot \log{\left(\sin{x}\right)}} \cdot 
+             \left(\left(\sin{\left(\sin{x}\right)}\right)'\cdot \log{\left(\sin{x}\right)} +
+             \left(\log{\left(\sin{x}\right)}\right)' \cdot \sin{\left(\sin{x}\right)}
+             \right) \\
+          &= e^{\sin{\left(\sin{x}\right)} \cdot \log{\left(\sin{x}\right)}} \cdot 
+             \left(\cos{\left(\sin{x}\right)}\cdot \cos{x}\cdot \log{\left(\sin{x}\right)} +
+             \frac{\cos{x}}{\sin{x}} \cdot \sin{\left(\sin{x}\right)}
+             \right) \\
+          &= e^{\sin{\left(\sin{x}\right)} \cdot \log{\left(\sin{x}\right)}} \cdot 
+             \left(\cos{\left(\sin{x}\right)}\cdot \cos{x}\cdot \log{\left(\sin{x}\right)} +
+             \cot{x} \cdot \sin{\left(\sin{x}\right)}
+             \right) \\
+          &= \left(\sin{x}\right)^{\sin{\left(\sin{x}\right)}}\left(
+            \cos{\left(\sin{x}\right)}\cdot \cos{x}\cdot \log{\left(\sin{x}\right)} +
+            \cot{x} \cdot \sin{\left(\sin{x}\right)}
+             \right)
+\end{align*}
+Por lo tanto
+\[
+    \boxed{\boxed{\left(\left(\sin{x}\right)^{\sin{\left(\sin{x}\right)}}\right)' = \left(\sin{x}\right)^{\sin{\left(\sin{x}\right)}}\left(
+        \cos{\left(\sin{x}\right)}\cdot \cos{x}\cdot \log{\left(\sin{x}\right)} +
+        \cot{x} \cdot \sin{\left(\sin{x}\right)}\right)}}
+\]
+\subsection{Ejercicio 2}
+\noindent
+\begin{itemize}
+    \item Compruebe que \(f'(x) = f(x)\left(\log{\left(f(x)\right)}\right)'\), sí \(f > 0\)
+    y derivable
+    \item Halle \(f'(x)\) para cada una de las siguientes funciones
+    \begin{align*}
+        f(x) &= \left(1 + x\right)\left(1 + e^{x^2}\right) \\
+        f(x) &= \frac{(3 - x)^{\frac{1}{3}}x^2}{(1 - x)(3 + x)^{2^{3}}} \\
+        f(x) &= \frac{e^{x} - e^{-x}}{e^{2x}(1 + x^3)}
+    \end{align*}
+\end{itemize}
+\subsubsection*{Solución}
+\subsection{Ejercicio 3}
+\noindent
+Hallar los siguientes límites mediante la regla de L'Hôpital
+\begin{align*}
+    \lim_{x \to 0} &\frac{\sin{x} - x + \frac{x^3}{6}}{x^3} \\
+    \lim_{x \to 0} &\frac{\sin{x} - x + \frac{x^3}{6}}{x^4} \\
+    \lim_{x \to 0} &\frac{\cos{x} - 1 + \frac{x^2}{2}}{x^2} \\
+\end{align*}
+\subsubsection*{Solución}
+\end{document}
