@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/main"] 1711313528 "build/main.bcf" "build/main.bbl" "build/main" 1711313865 0
+["biber build/main"] 1711316703 "build/main.bcf" "build/main.bbl" "build/main" 1711317067 0
   "./ecl.bib" 1692853586 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "build/main.bcf" 1711313864 107344 5a52ae481bd48588b1ab466a66e8c3ff "pdflatex"
+  "build/main.bcf" 1711317066 107344 5a52ae481bd48588b1ab466a66e8c3ff "pdflatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["pdflatex"] 1711313862 "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-ii/ejercicios/main.tex" "build/main.pdf" "main" 1711313865 0
+["pdflatex"] 1711317064 "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-ii/ejercicios/main.tex" "build/main.pdf" "main" 1711317067 0
   "C:/Users/faust/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1707773613 162602 09e0a1780be476291122a2020f89e47e ""
   "C:/Users/faust/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1689719158 24118871 b4f594084964a40323743f0bbfbd51d7 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -249,13 +249,13 @@
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/wasysym.sty" 1579693002 11252 7fbfbe7bbcbe1f73acbe32ae2f10c666 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "build/main.aux" 1711313864 1286 fc4a5ee7fccbebbac4533c5acabc41f5 "pdflatex"
-  "build/main.bbl" 1711313529 486 ee04f40f768daeed26442158e95aba61 "biber build/main"
-  "build/main.out" 1711313864 438 d3baa0538bce202457a8073c940d1c78 "pdflatex"
-  "build/main.run.xml" 1711313864 2298 d3ce36a7304073a33186df2fa4c9cbc3 "pdflatex"
-  "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-ii/ejercicios/main.tex" 1711313860 12091 a60f69aceadb270f4c113c585b205841 ""
+  "build/main.aux" 1711317066 1286 dcb54bafa434bd0de76b71ebac488776 "pdflatex"
+  "build/main.bbl" 1711316704 486 ee04f40f768daeed26442158e95aba61 "biber build/main"
+  "build/main.out" 1711317066 438 d3baa0538bce202457a8073c940d1c78 "pdflatex"
+  "build/main.run.xml" 1711317066 2298 d3ce36a7304073a33186df2fa4c9cbc3 "pdflatex"
+  "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-ii/ejercicios/main.tex" 1711317064 16391 bd67965a8645ed7dab3ef245264845a5 ""
   "head.tex" 1693865399 2792 da67866cba2ac6acd5a3668166b14daf ""
-  "main.tex" 1711313860 12091 a60f69aceadb270f4c113c585b205841 ""
+  "main.tex" 1711317064 16391 bd67965a8645ed7dab3ef245264845a5 ""
   "style/avm.sty" 1692853586 5221 cec8bc669a9099a9976655c41e198f2d ""
   "style/btree.sty" 1692853586 4357 1f940af56ec4d6b13bc5f67ae255817c ""
   "style/lstlisting.sty" 1692853586 969 44fc7c305325b375fc1157a6ff8b063e ""

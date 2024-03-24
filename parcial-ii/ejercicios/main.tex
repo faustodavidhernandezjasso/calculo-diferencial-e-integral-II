@@ -255,7 +255,7 @@ Por lo tanto
 \newpage
 \subsection{Ejercicio 2}
 \noindent
-\begin{itemize}
+\begin{enumerate}
     \item Compruebe que \(f'(x) = f(x)\left(\log{\left(f(x)\right)}\right)'\), sí \(f > 0\)
     y derivable
     \item Halle \(f'(x)\) para cada una de las siguientes funciones
@@ -264,8 +264,80 @@ Por lo tanto
         f(x) &= \frac{(3 - x)^{\frac{1}{3}}x^2}{(1 - x)(3 + x)^{2^{3}}} \\
         f(x) &= \frac{e^{x} - e^{-x}}{e^{2x}(1 + x^3)}
     \end{align*}
-\end{itemize}
+\end{enumerate}
 \subsubsection*{Solución}
+Veamos (1)
+\newline 
+Sabemos que \(f(x) > 0\) \(\forall x \in D_{f}\) entonces \(\log{f(x)}\) está bien definido, 
+también tenemos por hipótesis que \(f'(x)\) existe, también sabemos que \(\log{x}\) es derivable 
+así \(\log{\left(f(x)\right)}\) es derivable. Consecuentemente:
+\begin{align*}
+    \left(\log{\left(f(x)\right)}\right)' &= \frac{1}{f(x)} \cdot f'(x) \\
+                                          &= \frac{f'(x)}{f(x)} \\
+\end{align*}
+Despejando \(f'(x)\) tenemos que 
+\begin{align*}
+    f'(x) &= \left(\log{\left(f(x)\right)}\right)' \cdot f(x)
+\end{align*}
+Veamos (2)
+\newline
+Veamos \(f(x) = \left(1 + x\right)\left(1 + e^{x^2}\right)\). 
+\newline 
+Obteniendo \(\log\) de ambos lados
+\begin{align*}
+    \log{\left(f(x)\right)} &= \log{\left(\left(1 + x\right)\left(1 + e^{x^2}\right)\right)} \\
+                            &= \log{\left(1 + x\right)} +  \log{\left(1 + e^{x^2}\right)}
+\end{align*}
+Derivando de ambos lados
+\begin{align*}
+    \frac{f'(x)}{f(x)} &= \frac{1}{1 + x} + \frac{1}{1 + e^{x^{2}}} \cdot e^{x^2} \cdot 2x \\
+                       &= \frac{1}{1 + x} + \frac{2x\cdot e^{x^2}}{1 + e^{x^{2}}}
+\end{align*}
+Los anterior es equivalente a 
+\begin{align*}
+    f'(x) &= f(x) \left(\frac{1}{1 + x} + \frac{2x\cdot e^{x^2}}{1 + e^{x^{2}}}\right)  \\
+    f'(x) &= \left(1 + x\right)\left(1 + e^{x^2}\right) \left(\frac{1}{1 + x} + \frac{2x\cdot e^{x^2}}{1 + e^{x^{2}}}\right)  \\
+\end{align*}
+Veamos \(f(x) = \frac{(3 - x)^{\frac{1}{3}}x^2}{(1 - x)(3 + x)^{2^{3}}} = \frac{(3 - x)^{\frac{1}{3}}x^2}{(1 - x)(3 + x)^{8}}\)
+\newline
+Obteniendo \(\log\) de ambos lados
+\begin{align*}
+    \log{\left(f(x)\right)} &= \log{\left(\frac{(3 - x)^{\frac{1}{3}}x^2}{(1 - x)(3 + x)^{8}}\right)} \\
+                            &= \log{\left((3 - x)^{\frac{1}{3}}x^2\right)} - \log{\left((1 - x)(3 + x)^{8}\right)} \\
+                            &= \log{\left((3 - x)^{\frac{1}{3}}\right)} + \log{\left(x^2\right)} - \left(\log{(1 - x)} + \log{\left((3 + x)^{8}\right)}\right) \\
+                            &= \frac{1}{3}\log{\left(3 - x\right)} + 2\log{\left(x\right)} - \left(\log{(1 - x)} + 8\log{\left(3 + x\right)}\right) \\
+                            &= \frac{1}{3}\log{\left(3 - x\right)} + 2\log{\left(x\right)} - \log{(1 - x)} - 8\log{\left(3 + x\right)} \\
+\end{align*}
+Derivando de ambos lados
+\begin{align*}
+    \frac{f'(x)}{f(x)} &= \frac{1}{3}\left(-\frac{1}{3 - x}\right) + 2\left(\frac{1}{x}\right) - \left(- \frac{1}{1 - x}\right) - 8\left(\frac{1}{3 + x}\right) \\
+                       &= -\frac{1}{3(3 - x)} + \frac{2}{x} + \frac{1}{1 - x} - \frac{8}{3 + x} \\
+\end{align*}
+Lo anterior es equivalente a
+\begin{align*}
+    f'(x) &= f(x) \left(-\frac{1}{3(3 - x)} + \frac{2}{x} + \frac{1}{1 - x} - \frac{8}{3 + x}\right) \\
+    f'(x) &= \left(\frac{(3 - x)^{\frac{1}{3}}x^2}{(1 - x)(3 + x)^{8}}\right) \left(-\frac{1}{3(3 - x)} + \frac{2}{x} + \frac{1}{1 - x} - \frac{8}{3 + x}\right) \\
+\end{align*}
+Veamos \(f(x) = \frac{e^{x} - e^{-x}}{e^{2x}(1 + x^3)}\)
+\newline
+Obteniendo \(\log\) de ambos lados
+\begin{align*}
+    \log{\left(f(x)\right)} &= \log{\left(\frac{e^{x} - e^{-x}}{e^{2x}(1 + x^3)}\right)} \\
+                            &= \log{\left(e^{x} - e^{-x}\right)} - \log{\left(e^{2x}(1 + x^3)\right)} \\
+                            &= \log{\left(e^{x} - e^{-x}\right)} - \left(\log{\left(e^{2x}\right)} + \log{\left(1 + x^3\right)}\right) \\
+                            &= \log{\left(e^{x} - e^{-x}\right)} - \log{\left(e^{2x}\right)} - \log{\left(1 + x^3\right)} \\
+                            &= \log{\left(e^{x} - e^{-x}\right)} - 2x - \log{\left(1 + x^3\right)} \\
+\end{align*}
+Derivando de ambos lados
+\begin{align*}
+    \frac{f'(x)}{f(x)} &= \left(\frac{1}{e^{x} - e^{-x}}\right)\left(e^{x} + e^{-x}\right) - 2 - \left(\frac{1}{1 + x^3}\right)\left(3x^2\right) \\
+                       &= \frac{e^{x} + e^{-x}}{e^{x} - e^{-x}} - 2 - \frac{3x^2}{1 + x^3} \\
+\end{align*}
+Lo anterior es equivalente a
+\begin{align*}
+    f'(x) &= f(x) \left(\frac{e^{x} + e^{-x}}{e^{x} - e^{-x}} - 2 - \frac{3x^2}{1 + x^3}\right) \\
+    f'(x) &= \left(\frac{e^{x} - e^{-x}}{e^{2x}(1 + x^3)}\right)\left(\frac{e^{x} + e^{-x}}{e^{x} - e^{-x}} - 2 - \frac{3x^2}{1 + x^3}\right)
+\end{align*}
 \subsection{Ejercicio 3}
 \noindent
 Hallar los siguientes límites mediante la regla de L'Hôpital
