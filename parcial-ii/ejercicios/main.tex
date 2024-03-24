@@ -209,6 +209,50 @@ Por lo tanto
         \cos{\left(\sin{x}\right)}\cdot \cos{x}\cdot \log{\left(\sin{x}\right)} +
         \cot{x} \cdot \sin{\left(\sin{x}\right)}\right)}}
 \]
+Veamos \(f(x) = e^{\left(\int_{0}^{x} e^{-t^2} \ dt\right)} \\\)
+\newline
+Sea \(h(x) = e^{x}\) y \(g(x) = \int_{0}^{x} e^{-t^2} dt\), notemos lo siguiente:
+\begin{align*}
+    \left(h \circ g\right)(x) &= h(g(x)) \\
+                              &= h\left(\int_{0}^{x} e^{-t^2} dt\right) \\
+                              &= e^{\left(\int_{0}^{x} e^{-t^2} dt\right)} \\
+\end{align*}
+Así tenemos que
+\begin{align*}
+    f'(x) &= \left(h(g(x))\right)' \\
+          &= h'(g(x))\cdot g'(x) \\
+\end{align*}
+Sabemos que \(h'(x) = e^{x}\) y \(g'(x) = e^{-x^2}\) ya que \(e^{-t^2}\) es continua en todo \(\mathbb{R}\)
+y por el \textbf{Primer Teorema Fundamental tenemos que} \(\left(\int_{0}^{x} e^{-t^2} dt\right)' = e^{-x^2}\),
+entonces
+\begin{align*}
+    f'(x) &= h'\left(\int_{0}^{x} e^{-t^2} dt\right)\cdot e^{-x^2} \\
+          &= e^{\left(\int_{0}^{x} e^{-t^2} dt\right)}\cdot e^{-x^2}
+\end{align*}
+Por lo tanto 
+\[
+    \boxed{\boxed{\left(e^{\left(\int_{0}^{x} e^{-t^2} dt\right)}\right)' = e^{\left(\int_{0}^{x} e^{-t^2} dt\right)}\cdot e^{-x^2}}}  
+\]
+Veamos \(f(x) = x^{x}\)
+Por las propiedades de la función exponencial y de la función logaritmo tenemos que
+\begin{align*}
+    f(x) &= \left(\sin{x}\right)^{\sin{\left(\sin{x}\right)}} \\
+         &= e^{x \log{x}} \\
+\end{align*}
+Así tenemos que 
+\begin{align*}
+    f'(x) &= \left(e^{x \log{x}}\right)' \\
+          &= e^{x \log{x}}\left(x \log{x}\right)' \\
+          &= e^{x \log{x}}\left(x \cdot \left(\log{x}\right)' + \log{x} \cdot x'\right) \\
+          &= e^{x \log{x}}\left(x \cdot \left(\frac{1}{x}\right) + \log{x} \cdot 1\right) \\
+          &= e^{x \log{x}}\left(1 + \log{x}\right) \\
+          &= x^{x}\left(1 + \log{x}\right) \\
+\end{align*}
+Por lo tanto 
+\[
+    \boxed{\boxed{\left(x^x\right)' = x^{x}\left(1 + \log{x}\right)}}
+\]
+\newpage
 \subsection{Ejercicio 2}
 \noindent
 \begin{itemize}
