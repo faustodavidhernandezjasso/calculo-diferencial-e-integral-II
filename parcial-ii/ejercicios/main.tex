@@ -347,4 +347,102 @@ Hallar los siguientes límites mediante la regla de L'Hôpital
     \lim_{x \to 0} &\frac{\cos{x} - 1 + \frac{x^2}{2}}{x^2} \\
 \end{align*}
 \subsubsection*{Solución}
+Veamos \(\displaystyle \lim_{x \to 0} \frac{\sin{x} - x + \frac{x^3}{6}}{x^3}\)
+\begin{align*}
+    \lim_{x \to 0} \frac{\sin{x} - x + \frac{x^3}{6}}{x^3} &= \frac{\displaystyle{\lim_{x \to 0}} \left(\sin{x} - x + \frac{x^3}{6}\right)}{\displaystyle{\lim_{x \to 0}}x^3} \\
+    &= \frac{\displaystyle{\lim_{x \to 0}} \sin{x} - \displaystyle{\lim_{x \to 0}} x + \displaystyle{\lim_{x \to 0}}\frac{x^3}{6}}{\displaystyle{\lim_{x \to 0}}x^3} \\
+    &= \frac{0}{0}
+\end{align*}
+Entonces podemos aplicar L'Hôpital
+\begin{align*}
+    \lim_{x \to 0} \frac{\sin{x} - x + \frac{x^3}{6}}{x^3} &= \lim_{x \to 0} \frac{\cos{x} - 1 + \frac{x^2}{2}}{3x^2} \\
+    &= \frac{\displaystyle{\lim_{x \to 0}} \left(\cos{x} - 1 + \frac{x^2}{2}\right)}{\displaystyle{\lim_{x \to 0}} 3x^2} \\
+    &= \frac{\displaystyle{\lim_{x \to 0}} \cos{x} - \displaystyle{\lim_{x \to 0}} 1 + \displaystyle{\lim_{x \to 0}} \frac{x^2}{2}}{\displaystyle{\lim_{x \to 0}} 3x^2} \\
+    &= \frac{1 - 1 + 0}{0} \\
+    &= \frac{0}{0}
+\end{align*}
+Podemos aplicar L'Hôpital
+\begin{align*}
+    \lim_{x \to 0} \frac{\cos{x} - 1 + \frac{x^2}{2}}{3x^2} &= \lim_{x \to 0} \frac{-\sin{x} + x}{6x} \\
+    &= \frac{\displaystyle{\lim_{x \to 0}} \left(-\sin{x} + x\right)}{\displaystyle{\lim_{x \to 0}} 6x} \\
+    &= \frac{-\displaystyle{\lim_{x \to 0}} \sin{x} + \displaystyle{\lim_{x \to 0}} x}{\displaystyle{\lim_{x \to 0}} 6x} \\
+    &= \frac{- 0 + 0}{\displaystyle{0}} \\
+    &= \frac{0}{\displaystyle{0}}
+\end{align*}
+Podemos aplicar L'Hôpital
+\begin{align*}
+    \lim_{x \to 0} \frac{-\sin{x} + x}{6x} &= \lim_{x \to 0} \frac{-\cos{x} + 1}{6} \\
+    &= \frac{-\cos{0} + 1}{6} \\
+    &= \frac{-1 + 1}{6} \\
+    &= \frac{0}{6} \\
+    &= 0
+\end{align*}
+Por lo tanto
+\[
+    \boxed{\boxed{ \lim_{x \to 0} \frac{\sin{x} - x + \frac{x^3}{6}}{x^3} = 0 }}
+\]
+Veamos \(\displaystyle \lim_{x \to 0} \frac{\sin{x} - x + \frac{x^3}{6}}{x^4}\)
+\begin{align*}
+    \lim_{x \to 0} \frac{\sin{x} - x + \frac{x^3}{6}}{x^4} &= \frac{\displaystyle{\lim_{x \to 0}} \left(\sin{x} - x + \frac{x^3}{6}\right)}{\displaystyle{\lim_{x \to 0}}x^4} \\
+    &= \frac{\displaystyle{\lim_{x \to 0}} \sin{x} - \displaystyle{\lim_{x \to 0}} x + \displaystyle{\lim_{x \to 0}}\frac{x^3}{6}}{\displaystyle{\lim_{x \to 0}}x^4} \\
+    &= \frac{0}{0}
+\end{align*}
+Entonces podemos aplicar L'Hôpital
+\begin{align*}
+    \lim_{x \to 0} \frac{\sin{x} - x + \frac{x^3}{6}}{x^4} &= \lim_{x \to 0} \frac{\cos{x} - 1 + \frac{x^2}{2}}{4x^3} \\
+    &= \frac{\displaystyle{\lim_{x \to 0}} \left(\cos{x} - 1 + \frac{x^2}{2}\right)}{\displaystyle{\lim_{x \to 0}} 4x^3} \\
+    &= \frac{\displaystyle{\lim_{x \to 0}} \cos{x} - \displaystyle{\lim_{x \to 0}} 1 + \displaystyle{\lim_{x \to 0}} \frac{x^2}{2}}{\displaystyle{\lim_{x \to 0}} 4x^3} \\
+    &= \frac{1 - 1 + 0}{0} \\
+    &= \frac{0}{0}
+\end{align*}
+Podemos aplicar L'Hôpital
+\begin{align*}
+    \lim_{x \to 0} \frac{\cos{x} - 1 + \frac{x^2}{2}}{4x^3} &= \lim_{x \to 0} \frac{-\sin{x} + x}{12x^2} \\
+    &= \frac{\displaystyle{\lim_{x \to 0}} \left(-\sin{x} + x\right)}{\displaystyle{\lim_{x \to 0}} 12x^2} \\
+    &= \frac{-\displaystyle{\lim_{x \to 0}} \sin{x} + \displaystyle{\lim_{x \to 0}} x}{\displaystyle{\lim_{x \to 0}} 12x^2} \\
+    &= \frac{- 0 + 0}{\displaystyle{0}} \\
+    &= \frac{0}{\displaystyle{0}}
+\end{align*}
+Podemos aplicar L'Hôpital
+\begin{align*}
+    \lim_{x \to 0} \frac{-\sin{x} + x}{12x^2} &= \lim_{x \to 0} \frac{-\cos{x} + 1}{24x} \\
+    &= \frac{\displaystyle{\lim_{x \to 0}}\left(-\cos{x} + 1\right)}{\displaystyle{\lim_{x \to 0}} 24x} \\
+    &= \frac{ - \displaystyle{\lim_{x \to 0}} \cos{x} + \displaystyle{\lim_{x \to 0}} 1}{\displaystyle{\lim_{x \to 0}} 24x} \\
+    &= \frac{ - 1 + 1}{0} \\
+    &= \frac{0}{0}
+\end{align*}
+Podemos aplicar L'Hôpital
+\begin{align*}
+    \lim_{x \to 0} \frac{-\cos{x} + 1}{24x} &= \lim_{x \to 0} \frac{\sin{x}}{24} \\
+    &= \frac{0}{24} \\
+    &= 0
+\end{align*}
+Por lo tanto 
+\[
+    \boxed{\boxed{\lim_{x \to 0} \frac{\sin{x} - x + \frac{x^3}{6}}{x^4} = 0}}
+\]
+Veamos \(\displaystyle{\lim_{x \to 0}} \frac{\cos{x} - 1 + \frac{x^2}{2}}{x^2}\)
+\begin{align*}
+    \lim_{x \to 0} \frac{\cos{x} - 1 + \frac{x^2}{2}}{x^2} &= \frac{\displaystyle{\lim_{x \to 0}}  \left(\cos{x} - 1 + \frac{x^2}{2}\right)}{\displaystyle{\lim_{x \to 0}} x^2} \\
+    &= \frac{\displaystyle{\lim_{x \to 0}}  \cos{x} - \displaystyle{\lim_{x \to 0}} 1 + \displaystyle{\lim_{x \to 0}} \frac{x^2}{2}}{\displaystyle{\lim_{x \to 0}} x^2} \\
+    &= \frac{1 - 1 + 0}{0} \\
+    &= \frac{0}{0}
+\end{align*}
+Podemos aplicar L'Hôpital
+\begin{align*}
+    \lim_{x \to 0} \frac{\cos{x} - 1 + \frac{x^2}{2}}{x^2} &= \lim_{x \to 0} \frac{-\sin{x} + x}{2x} \\
+    &= \frac{\displaystyle{\lim_{x \to 0}} \left(-\sin{x} + x\right)}{\displaystyle{\lim_{x \to 0}}2x} \\
+    &= \frac{-\displaystyle{\lim_{x \to 0}} \sin{x} + \displaystyle{\lim_{x \to 0}} x}{\displaystyle{\lim_{x \to 0}}2x} \\
+    &= \frac{-0 + 0}{0} \\
+    &= \frac{0}{0} \\
+\end{align*}
+Podemos aplicar L'Hôpital
+\begin{align*}
+    \lim_{x \to 0} \frac{-\sin{x} + x}{2x} &= \lim_{x \to 0} \frac{-\cos{x} + 1}{2} \\
+    &= \lim_{x \to 0} \frac{-\cos{x} + 1}{2} \\
+    &= \frac{-\cos{0} + 1}{2} \\
+    &= \frac{-1 + 1}{2} \\
+    &= \frac{0}{2} \\
+    &= 0 \\
+\end{align*}
 \end{document}
