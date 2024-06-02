@@ -1,12 +1,11 @@
 # Fdb version 4
-["biber build/main"] 0 "build/main.bcf" "build/main.bbl" "build/main" 1716966108.95179 -1
-  "build/main.bcf" 1716966108 108080 3ac26b138b374e245740d449a7b8388f "pdflatex"
-  "ecl.bib" 1692853586 0 d41d8cd98f00b204e9800998ecf8427e ""
+["biber build/main"] 1717219775.44571 "build/main.bcf" "build/main.bbl" "build/main" 1717220729.3581 0
+  "build/main.bcf" 1717220729 108080 3ac26b138b374e245740d449a7b8388f "pdflatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["pdflatex"] 1716966106.73094 "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-iv/main.tex" "build/main.pdf" "main" 1716966108.95228 0
+["pdflatex"] 1717220727.15023 "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-iv/main.tex" "build/main.pdf" "main" 1717220729.35855 0
   "C:/Users/faust/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1716965025 163704 3d12d89c4f302fac671cb207c91965bf ""
   "C:/Users/faust/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1711592885 24236006 61ebe43f0dbd805dbc7d25d1774eadeb ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -31,6 +30,7 @@
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb" 1136874948 35118 a8551d23cfb4fcceb64f161610e925d2 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247596667 37912 07513ec114ac737ab54cea0152f4424b ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1247596667 31809 8670ca339bf94e56da1fc21c80635e2a ""
@@ -250,13 +250,13 @@
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/wasysym.sty" 1579693002 11252 7fbfbe7bbcbe1f73acbe32ae2f10c666 ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/faust/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "build/main.aux" 1716966108 1137 e392ddcf973ace6d5c0d863eb4a914b3 "pdflatex"
-  "build/main.bbl" 1716962039 486 76d65a242ec496c9b4361af646ff12cb "biber build/main"
-  "build/main.out" 1716966108 668 ab6a01ce4aaaff8e9ba0dceb0568c7bc "pdflatex"
-  "build/main.run.xml" 1716966108 2298 d3ce36a7304073a33186df2fa4c9cbc3 "pdflatex"
-  "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-iv/main.tex" 1716962994 8288 6e7a9c015df1f525746771189d2d422c ""
+  "build/main.aux" 1717220729 1020 9f5483fbd0bcc2a5320a88030c4d8f4a "pdflatex"
+  "build/main.bbl" 1717219776 486 76d65a242ec496c9b4361af646ff12cb "biber build/main"
+  "build/main.out" 1717220729 553 acc52960c4dc641cbbc6063190ad0b98 "pdflatex"
+  "build/main.run.xml" 1717220729 2298 d3ce36a7304073a33186df2fa4c9cbc3 "pdflatex"
+  "c:/Users/faust/Documents/Cálculo_Diferencial_E_Integral]_II/calculo-diferencial-e-integral-II/parcial-iv/main.tex" 1717220724 20338 b67b76c683b065b53cf01ec0ccffa484 ""
   "head.tex" 1693865399 2792 da67866cba2ac6acd5a3668166b14daf ""
-  "main.tex" 1716962994 8288 6e7a9c015df1f525746771189d2d422c ""
+  "main.tex" 1717220724 20338 b67b76c683b065b53cf01ec0ccffa484 ""
   "style/avm.sty" 1692853586 5221 cec8bc669a9099a9976655c41e198f2d ""
   "style/btree.sty" 1692853586 4357 1f940af56ec4d6b13bc5f67ae255817c ""
   "style/lstlisting.sty" 1692853586 969 44fc7c305325b375fc1157a6ff8b063e ""
