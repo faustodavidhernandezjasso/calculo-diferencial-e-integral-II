@@ -33,7 +33,51 @@ Aproximaciones con Polinomios\\
 \section{Ejercicios}
 \subsection{Ejercicio 1}
 \noindent
+Demuestra que el polinomio de Taylor de \(f(x) = \sin{x^2}\) de grado \(4n + 2\) en \(0\)
+es
+\[
+    x^2 - \frac{x^6}{3!} + \frac{x^{10}}{5!} - \dotsc + (-1)^n \frac{x^{4n + 2}}{(2n + 1)!}
+\]
 \subsubsection*{Solución}
+La definición del polinomio de Taylor en \(0\) de grado \(2n + 1\) de la función \(\sin{x}\)
+\begin{align*}
+    P_{2n + 1, 0, \sin{x}}(x) &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dotsc + \frac{(-1)^n}{(2n + 1)!}x^{2n+1}
+\end{align*}
+Por definición tenemos que 
+\begin{align*}
+    \sin{x} &= P_{2n + 1, 0, \sin{x}}(x) + R_{2n + 1, 0, \sin{x}}(x)
+\end{align*}
+Sabemos que si \(f\) es una función tal que \(f'(a), \dotsc, f^{(n)}(a)\) existen. Si 
+\(P\) es un polinomio en \((x-a)\) de grado menor o igual a \(n\), igual a \(f\) 
+hasta el orden \(n\) en \(a\), entonces \(P = P_{n, a, f}\).
+Como \(\sin{x}\) tiene derivadas en todos los órdenes para cada 
+\(x \in \mathbb{R}\), es decir, \(\sin{x}\) es de clase \(C^{\infty}\) en \(\mathbb{R}\), 
+entonces \(\sin^{(0)}{x}, \sin^{(1)}{x}, \dotsc, \sin^{(2n + 1)}{x}\) existen, tenemos que 
+\begin{align*}
+    \lim_{x \to 0} \frac{\sin{x} - P_{2n + 1, 0, \sin{x}}(x)}{x^{2n + 1}} &= \lim_{x \to 0} \frac{R_{2n + 1, 0, \sin{x}}(x)}{x^{2n + 1}}\\
+    &= 0
+\end{align*}
+Ya que \(P_{2n + 1, 0, \sin{x}}\) es el polinomio de Taylor de \(\sin{x}\).
+\newline
+Lo anterior implica que
+\begin{align*}
+    \lim_{x \to 0} \frac{R_{2n + 1, 0, \sin{x}}(x^2)}{(x^2)^{2n + 1}} &= 0
+\end{align*}
+Esto por definición es
+\begin{align*}
+    \lim_{x \to 0} \frac{\sin{x^2} - P_{2n + 1, 0, \sin{x}}(x^2)}{x^{4n + 2}} &= 0
+\end{align*}
+Sabemos que si \(f\) es una función tal que \(f'(a), \dotsc, f^{(n)}(a)\) existen. Si 
+\(P\) es un polinomio en \((x-a)\) de grado menor o igual a \(n\), igual a \(f\) 
+hasta el orden \(n\) en \(a\), entonces \(P = P_{n, a, f}\).
+Por lo tanto 
+\begin{align*}
+    P_{4n + 2, 0, \sin{x^2}}(x) = P_{2n, 0, \sin{x}}(x^2)
+\end{align*}
+Consecuentemente 
+\begin{align*}
+    P_{4n + 2, 0, \sin{x^2}}(x) &= x^2 - \frac{x^6}{3!} + \frac{x^{10}}{5!} - \frac{x^{14}}{7!} + \dotsc + \frac{(-1)^n}{(2n + 1)!}x^{4n+2} \\
+\end{align*}
 \newpage
 \subsection{Ejercicio 2}
 \noindent
