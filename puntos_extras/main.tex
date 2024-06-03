@@ -1,0 +1,157 @@
+\documentclass[a4paper]{article} 
+\input{head}
+\newcommand{\pow}[2]{#1^{#2}}
+\newcommand{\supra}[1]{\textsuperscript{#1}}
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule \medskip % Upper rule
+\begin{minipage}{0.35\textwidth} 
+\raggedright
+\footnotesize
+Fausto David Hernández Jasso \hfill\\   
+317000928 \hfill\\
+fausto.david.hernandez.jasso@ciencias.unam.mx
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\large 
+Cálculo Diferencial e Integral II\\ 
+\normalsize 
+Aproximaciones con Polinomios\\ 
+\end{minipage}
+\begin{minipage}{0.24\textwidth} 
+\raggedleft
+\today\hfill\\
+\end{minipage}
+\medskip\hrule 
+\bigskip
+\section{Ejercicios}
+\subsection{Ejercicio 1}
+\noindent
+\subsubsection*{Solución}
+\newpage
+\subsection{Ejercicio 2}
+\noindent
+Se define para todo número real \(\alpha\) y para todo entero no negativo \(n\), el coeficiente 
+binomial
+\[
+    \binom{\alpha}{n} = \frac{\alpha \cdot \left(\alpha - 1\right) \dotsc \left(\alpha - n + 1\right)}{n!}
+\]
+Demuestra que el polinomio de Taylor de la función \(f(x) = \left(1 + x\right)^{\alpha}\) en \(0\)
+es
+\[
+    P_{n, 0}(x) = \sum_{k = 0}^{n} \binom{\alpha}{k} x^{k}
+\]
+\subsubsection*{Solución}
+\begin{proof}
+    Sea \(f(x) = \left(1 + x\right)^{\alpha}\) tenemos que 
+    \begin{align*}
+        f^{(1)}(x) &= \alpha\left(1 + x\right)^{\alpha - 1} \\
+        f^{(2)}(x) &= \alpha\left(\alpha - 1\right)\left(1 + x\right)^{\alpha - 2} \\
+        f^{(3)}(x) &= \alpha\left(\alpha - 1\right)\left(\alpha - 2\right)\left(1 + x\right)^{\alpha - 3} \\
+        &\vdots \\
+        f^{(n)}(x) &= \alpha\left(\alpha - 1\right)\left(\alpha - 2\right) \cdots \left(\alpha - n + 1\right)\left(1 + x\right)^{\alpha - n}
+    \end{align*}
+    Evaluando todas las derivadas en \(0\) tenemos que 
+    \begin{align*}
+        f^{(1)}(0) &= \alpha\left(1\right)^{\alpha - 1} = \alpha \\
+        f^{(2)}(0) &= \alpha\left(\alpha - 1\right)\left(1\right)^{\alpha - 2} = \alpha\left(\alpha - 1\right) \\
+        f^{(3)}(0) &= \alpha\left(\alpha - 1\right)\left(\alpha - 2\right)\left(1\right)^{\alpha - 3} = \alpha\left(\alpha - 1\right)\left(\alpha - 2\right) \\
+        &\vdots \\
+        f^{(n)}(0) &= \alpha\left(\alpha - 1\right)\left(\alpha - 2\right) \cdots \left(\alpha - n + 1\right)\left(1\right)^{\alpha - n} = \alpha\left(\alpha - 1\right)\left(\alpha - 2\right) \cdots \left(\alpha - n + 1\right)
+    \end{align*}
+    Por definición del polinomio de Taylor de \(f\) en \(0\)
+    \begin{align*}
+        P_{n, 0, f}(x) &= \sum_{k = 0}^{n} \frac{f^{(k)}(0)}{k!}x^k \\
+        &= f(0) + \frac{f^{(1)}(0)}{1!}x + \frac{f^{(2)}(0)}{2!}x^2 + \frac{f^{(3)}(0)}{3!}x^3 + \dotsc + \frac{f^{(n)}(0)}{n!}x^n \\
+        &= 1 + \frac{\alpha}{1!}x + \frac{\alpha\left(\alpha - 1\right)}{2!}x^2 + \frac{\alpha\left(\alpha - 1\right)\left(\alpha - 2\right)}{3!}x^3 + \dotsc + \frac{\alpha\left(\alpha - 1\right)\left(\alpha - 2\right) \cdots \left(\alpha - n + 1\right)}{n!}x^n \\
+        &= 1\binom{\alpha}{0} + \binom{\alpha}{1}x + \binom{\alpha}{2}x^2 + \binom{\alpha}{3}x^3 + \dotsc + \binom{\alpha}{n}x^n \\
+        &= \sum_{k = 0}^{n} \binom{\alpha}{k}x^{k}
+    \end{align*}
+\end{proof}
+\newpage
+\subsection{Ejercicio 3}
+\noindent
+Supongáse que \(a_{i}\) y \(b_{i}\) son los coeficientes de los polinomios de Taylor en \(a\) de \(f\)
+y de \(g\), respectivamente. Hallar los coeficientes \(c_{i}\) de los polinomios de Taylos en \(a\)
+de las siguientes funciones, en términos de \(a_{i}\) y \(b_{i}\).
+\begin{itemize}
+    \item \(f + g\)
+    \item \(fg\)
+    \item \(f'\)
+    \item \(h(x) = \displaystyle \int_{0}^{x} f(t) dt\)
+\end{itemize}
+\subsubsection*{Solución}
+Recordemos que los coeficientes \(a_{i}\) y \(b_{i}\) de los polinomios de Taylor en \(a\) de \(f\) y \(g\)
+respectivamente están definidos como sigue:
+\begin{align*}
+    a_{i} &= \frac{f^{(i)}(a)}{i!} \\
+    b_{i} &= \frac{g^{(i)}(a)}{i!}
+\end{align*}
+Veamos \(f + g\)
+\newline
+En éste caso por definición de la suma de polinomios, tenemos que 
+\begin{align*}
+    c_{i} &= a_{i} + b_{i}
+\end{align*}
+Veamos \(fg\)
+\newline 
+Notemos lo siguiente
+\begin{align*}
+    \left(fg\right)' &= fg' + gf' \\
+    \left(fg\right)'' &= fg'' + f'g' + + f'g' + f''g = fg'' + 2f'g' + f''g \\
+    \left(fg\right)''' &= fg''' + f'g'' + 2f''g' + 2f'g'' + f''g' + f'''g = f'''g + 3f''g' + 3f'g'' + fg''' \\
+    &\vdots \\
+    \left(fg\right)^{(n)} &= \binom{n}{0} f^{(n)}g^{(0)} + \binom{n}{1} f^{(n-1)}g^{(1)} + \binom{n}{2} f^{(n - 2)}g^{(2)} + \dotsc + \binom{n}{n - 2} f^{(2)}g^{(n - 2)} \binom{n}{n - 1} f^{(1)}g^{(n - 1)} + \binom{n}{n} f^{(0)}g^{(n)}
+\end{align*}
+Por definición del polinomio de Taylor de \(fg\) en \(a\), tenemos que 
+\begin{align*}
+    P_{n, a, fg} &= \sum_{k = 0}^{n} \frac{\left(fg\right)^{(k)}(a)}{k!}(x - a)^k
+\end{align*}
+Así tenemos que el \(k-\)ésimo término del polinomio de Taylor de \(fg\) en \(a\)
+es
+\begin{align*}
+    c_{k} = \frac{\left(fg\right)^{(k)}(a)}{k!} &= \frac{\displaystyle \sum_{i = 0}^{k} \binom{k}{i}f^{(k - i)}(a)g^{(i)}(a)}{k!}
+    = \sum_{i = 0}^{k} \binom{k}{i}a_{k - i}b_{i}
+\end{align*}
+Veamos \(f'\)
+\newline
+Por definición del polinomio de Taylor de \(f'\) en \(a\), tenemos que 
+\begin{align*}
+    P_{n, a, f'} &= \sum_{k = 0}^{n} \frac{\left(f'\right)^{(k)}(a)}{k!}(x - a)^k \\ 
+                 &= \sum_{k = 0}^{n} \frac{f^{(k +1)}(a)}{k!}(x - a)^k \\
+                 &= \frac{f^{(1)}(a)}{0!}(x - a)^0 + \frac{f^{(2)}(a)}{1!}(x - a)^1 + \frac{f^{(3)}(a)}{2!}(x - a)^2 + \dotsc + \frac{f^{(n)}(a)}{(n - 1)!}(x - a)^{n - 1} + \frac{f^{(n + 1)}(a)}{n!}(x - a)^n \\
+                 &= f^{(1)}(a) + f^{(2)}(a)(x - a)^1 + \frac{f^{(3)}(a)}{2}(x - a)^2 + \dotsc + \frac{f^{(n)}(a)}{(n - 1)!}(x - a)^{n - 1} + \frac{f^{(n + 1)}(a)}{n!}(x - a)^n
+\end{align*}
+Así tenemos que 
+\[
+    c_{k} = \frac{f^{(k + 1)}(a)}{k!} = (k + 1)a_{k + 1}
+\]
+Veamos \(h(x) = \displaystyle \int_{0}^{x} f(t) dt\)
+\newline 
+Notemos que 
+\begin{align*}
+    h^{(1)}(x) &= f(x) \\
+    h^{(2)}(x) &= f^{(1)}(x) \\
+    h^{(3)}(x) &= f^{(2)}(x) \\
+    h^{(4)}(x) &= f^{(3)}(x) \\
+    &\vdots \\
+    h^{(n)}(x) &= f^{(n - 1)}(x)
+\end{align*} 
+Por definición del polinomio de Taylor de \(h\) en \(a\), tenemos que 
+\begin{align*}
+    P_{n, a, h} &= \sum_{k = 0}^{n} \frac{\left(h\right)^{(k)}(a)}{k!}(x - a)^k \\ 
+                 &= \int_{0}^{a} f(t) dt + \sum_{k = 1}^{n} \frac{f^{(k - 1)}(a)}{k!}(x - a)^k
+\end{align*}
+Así 
+\begin{align*}
+    c_{0} &= \int_{0}^{a} f(t) dt \\
+    c_{i} &= a_{i - 1}
+\end{align*}
+Para toda \(1 \leq i \leq n\)
+\end{document}
